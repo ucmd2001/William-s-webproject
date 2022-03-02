@@ -1,8 +1,8 @@
 
-#解決DNS連線問題
-import dns.resolver
-dns.resolver.default_resolver=dns.resolver.Resolver(configure=False)
-dns.resolver.default_resolver.nameservers=['8.8.8.8']
+# #解決DNS連線問題
+# import dns.resolver
+# dns.resolver.default_resolver=dns.resolver.Resolver(configure=False)
+# dns.resolver.default_resolver.nameservers=['8.8.8.8']
 # 以防有人大量濫用爬蟲，import time
 import time
 # #引用JWT金鑰
