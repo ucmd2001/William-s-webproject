@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 響應式網站 -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- 連結Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 連結style.CSS -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+    <title>William's Project Web</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="container-intro text-center">
+        <div class="row">
+            <div class="col-sm-4">
+                <h4 style="padding-top:15px;">Wellcome to William's Project Web</h4>
+            </div>
+            <div class="col-sm-4">
+                <p>這是一個簡單的作品集，我會把轉職上我學到的所有技能都放在這裡，希望能夠幫助到任何想要轉職的人。
+                This is a simple portfolio, I will put all the skills I have learned on the job transfer here, hoping to help anyone who wants to change jobs.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                
+            </div>
+        </div>
+    </div>
+    <!-- Body -->
+
+    <!-- 三欄位中間層 -->
+    <div class="container-fluid">
+        <div class="row content">
+            <!-- 左邊欄位 -->
+            <div class="col-sm-2 sidenav1">
+                <h3>作品集</h3>
+                <div class="page">
+                    <a href="/">首頁</a>
+                </div>
+                <div class="page">
+                    <a href="/member_system">會員系統</a>
+                </div>
+                <div class="page">
+                    <a href="/web_crawler">PTT標題爬蟲</a>
+                </div>
+                <div class="page">
+                    <a href="/ptt_crawler">PTT標題爬蟲-八卦版</a>
+                </div>
+                <div class="page">
+                    <a href="/ajax_crawler">Ajax標題爬蟲-for Medium</a>
+                </div>
+                <div class="page">
+                    <a href="/stock_crawler">漲停股爬蟲</a>
+                </div>
+            </div>
+            <!-- 中間欄位 -->
+            <div class="col-sm-8 main-content text-left">
+                <h2>PTT標題爬蟲-一般網頁版</h2>
+                <p>這是一個簡單的PTT-一般網頁爬蟲，如果有自己想要查詢的PTT網頁(不含18+的要求)也能丟上來查查看。 假如得到結果後也能自己去PTT看一下是不是正確的標題喔! 
+                <br>
+                這邊預設值是電影版的頁面。(另外為了防止有人濫用，限制一秒後才會顯示結果。)
+                </p>
+                 PTT_電影版網址 :  https://www.ptt.cc/bbs/movie/index.html 
+
+                <form action="/web_crawler" method="GET" id="webc_Form">
+                    <input type="text" name="url" id="url" >
+                    <button type="submit" disabled="disabled" class="btn btn-info" id="webc_btn"> 點擊送出查詢結果</button>
+                </form>
+                <br>
+                查詢結果是: <br>
+                {% if titles != undefind %}
+                <table >
+                    {% for key,value in titles.items()%}
+                    <tr>
+                        <td>{{value}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% endif %}
+
+            
+
+            </div>
+            <!-- 右邊欄位 先空白-->
+            <div class="col-sm-2 sidenav2">
+            </div>
+        </div>
+            
+    </div>
+    <!-- Footer -->
+    <!-- 回到頂部按鈕 -->
+    <button class="js-back-to-top back-to-top" title="Top">&#65085;</button>
+    <!-- 引用jQuery -->
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+        // 沒有資料不能送出表單
+        const url_get = document.getElementById("url")
+        const web_crawlarFrom=document.getElementById("webc_Form")
+        const web_crawlarbtn=document.getElementById("webc_btn")
+        web_crawlarFrom.addEventListener("input",() => {
+            if(url_get.value.length >0){
+                web_crawlarbtn.removeAttribute("disabled");
+            } else{
+                web_crawlarbtn.setAttribute("disabled","disabled")
+            }
+        });
+        // 回到頂部按鈕
+        $(function () {
+        var $win = $(window);
+        var $backToTop = $('.js-back-to-top');
+        // 當用戶滾動到離頂部100像素時，展示回到頂部按鈕
+        $win.scroll(function () {
+        if ($win.scrollTop() > 100) {
+        $backToTop.show();
+        } 
+        else {$backToTop.hide();}
+        });
+
+        // 當用戶點擊按鈕時，通過動畫效果返回頭部
+        $backToTop.click(function () {
+        $('html, body').animate({scrollTop: 0}, 200);
+        });
+        });
+    </script>
+    
+</body>
+</html>

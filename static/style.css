@@ -1,0 +1,164 @@
+/* 最上層顏色 */
+.container-intro{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,19,190,1) 8%, rgba(253,253,253,1) 98%);
+    color:white;
+    font-size: 10px;
+    padding: 15px;
+    text-shadow:3px 3px 3px black;
+}
+
+/* 回到最上層按鈕 */
+
+.back-to-top {
+    display: none; /* 默認是隱藏的，這樣在第一屏才不顯示 */
+    position: fixed; /* 位置是固定的 */
+    bottom: 20px; /* 顯示在頁面底部 */
+    right: 30px; /* 顯示在頁面的右邊 */
+    z-index: 99; /* 確保不被其他功能覆蓋 */
+    border: 1px solid #5cb85c; /* 顯示邊框 */
+    outline: none; /* 不顯示外框 */
+    background-color: #fff; /* 設置背景背景顏色 */
+    color: #5cb85c; /* 設置文本顏色 */
+    cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
+    padding: 10px 15px 15px 15px; /* 增加一些內邊距 */
+    border-radius: 10px; /* 增加圓角 */    
+}
+    
+.back-to-top:hover {
+    background-color: #5cb85c; /* 滑鼠移上去時，反轉顏色 */
+    color: #fff;
+}
+/* 中間內容 */
+
+.content{
+    height: 610px;
+}
+
+/* 首頁中間標題 */
+.title_index a {
+    font-size: 15px;
+    color: #1e59cf;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* 首頁內文預覽 */
+.inner {
+    font-size: 13px;
+}
+
+/* label 會員系統頁登入label */
+.main-content .signinlabel{
+    width: 100px;
+    display: inline-block;
+}
+/*label 會員系統頁註冊label */
+.main-content .pwmember{
+    width: 220px;
+    display: inline-block;
+}
+
+/* 輸入框旁邊小提示(small標籤) */
+small{
+    font-size: 13px;
+    color: rgba(76, 87, 102, 0.6);
+    line-height: 1.42857143;
+    font-weight: normal;
+}
+
+/* 登入帳號密碼輸入格 */
+.main-content form .account,
+.main-content form .password{
+    margin: 5px;
+    width:30%;
+    border-radius: 10px;
+    border-color:lightgray;
+}
+
+/* 註冊輸入格 */
+.main-content form .nickname_signup,
+.main-content form .account_signup,
+.main-content form .password_signup,
+.main-content form .password_signup_c{
+    margin: 5px;
+    width:30%;
+    border-radius: 10px;
+    border-color:lightgray;
+    vertical-align: middle; 
+    
+}
+/* label 變更密碼頁 */
+.main-content .pwchange{
+    width: 280px;
+    display: inline-block;
+}
+/* 更新密碼頁輸入格 */
+.main-content .cbpassword{
+    margin: 5px;
+    width:30%;
+    border-radius: 10px;
+    border-color:lightgray;
+    vertical-align: middle; 
+}
+
+/* 登入及註冊按鈕 */
+.main-content form .btn {
+    font-size: 15px;
+}
+
+/* 個人頁登出按鈕 */
+#logoutbtn{
+    font-size: 15px;
+}
+/* 個人頁超連結 */
+.main-content .setting_personal_info{
+    text-decoration: none;
+    font-size: large;
+}
+
+/* 個人資訊頁呈現方式 */
+.main-content .setting{
+    font-size: 10px;
+}
+/* 左邊作品列 */
+.sidenav1{
+    padding: 20px;
+    width: 200px;
+    background-color: rgb(201,201,201);
+    background-size:cover;
+}
+/* 左邊作品列超連結邊框 */
+.sidenav1 a{
+    text-align: left;
+    text-decoration: none;
+    color: rgb(7, 7, 7);
+    font-size: 13px;
+    
+}
+.sidenav1 a:hover{
+    color: rgb(2, 2, 2);
+}
+/* 左邊作品超連結設計 */
+.page{
+    width: 100%;
+    padding: 8px;
+}
+.page:hover{
+    background-color:#6495ED ; 
+    opacity: .6;   
+    transition: 1s;
+    border-radius: 10px;
+    
+}
+
+
+/* 中間內容調整 */
+.main-content{
+    background-color: white;
+    padding: 30px 40px;
+}
+/* ajax爬蟲中間內容調整 */
+.main-content .ajax_intro{
+    width: 90%;
+    display: inline-block;
+}
