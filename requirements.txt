@@ -12,8 +12,6 @@ charset-normalizer==2.0.12
 click==8.0.3
 colorama==0.4.4
 distlib==0.3.4
-Django==4.0.2
-django-cors-headers==3.11.0
 dnspython==2.2.0
 filelock==3.4.0
 Flask==2.0.2
