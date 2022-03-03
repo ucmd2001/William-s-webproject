@@ -1,11 +1,10 @@
 /* 最上層顏色 */
 .container-intro{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(19,19,190,1) 8%, rgba(253,253,253,1) 98%);
-    color:white;
+    background:rgb(212, 255, 212);
+    color:darkgreen;
     font-size: 10px;
     padding: 15px;
-    text-shadow:3px 3px 3px black;
+    
 }
 
 /* 回到最上層按鈕 */
@@ -22,7 +21,7 @@
     color: #5cb85c; /* 設置文本顏色 */
     cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
     padding: 10px 15px 15px 15px; /* 增加一些內邊距 */
-    border-radius: 10px; /* 增加圓角 */    
+    border-radius: 15px; /* 增加圓角 */    
 }
     
 .back-to-top:hover {
@@ -32,20 +31,59 @@
 /* 中間內容 */
 
 .content{
-    height: 610px;
+    height: 628px; 
+}
+.indextitle{
+    text-align: center;
+}
+/* 中間Bootstrap icon */
+/* 調整 ul list */
+.bs-icons ul{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: auto;
+    height: auto;
+    justify-content:center;
+}
+.bs-icons ul li a span.icons{
+    font-size: 100px;
+    display: block;
+    padding: 50px;
+    text-align: center;
 }
 
-/* 首頁中間標題 */
-.title_index a {
-    font-size: 15px;
-    color: #1e59cf;
-    font-weight: bold;
+/* 調整li */
+.bs-icons ul li{
+    list-style: none;
+    margin: 10px;
+}
+/* 調整ul lu 超連結a  */
+.bs-icons ul li a{
+    color: darkblue;
     text-decoration: none;
+    cursor: pointer;
 }
-/* 首頁內文預覽 */
-.inner {
-    font-size: 13px;
+/* 調整滑鼠移上去之後的顏色 */
+.bs-icons ul li .bi-person-circle:hover{
+    color: white;
+    background-color: darkblue;
+    border-radius:99em;
+    transition: 0.5s;
 }
+.bs-icons ul li .bi-bug:hover{
+    color: white;
+    background-color: darkblue;
+    border-radius: 99em;
+    transition: 0.5s;
+}
+.bs-icons ul li .bi-bug-fill:hover{
+    color: white;
+    background-color: darkblue;
+    border-radius: 99em;
+    transition: 0.5s;
+}
+
 
 /* label 會員系統頁登入label */
 .main-content .signinlabel{
@@ -122,18 +160,19 @@ small{
 }
 /* 左邊作品列 */
 .sidenav1{
-    padding: 20px;
-    width: 200px;
-    background-color: rgb(201,201,201);
-    background-size:cover;
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    background-size:30%;
+    color: green;
 }
 /* 左邊作品列超連結邊框 */
+
 .sidenav1 a{
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     color: rgb(7, 7, 7);
     font-size: 13px;
-    
 }
 .sidenav1 a:hover{
     color: rgb(2, 2, 2);
@@ -142,15 +181,27 @@ small{
 .page{
     width: 100%;
     padding: 8px;
+    background-color: rgb(207, 207, 207);
+    margin: 5px;
+    text-align: center;
+    border-radius: 15px;
+    color: black;
 }
 .page:hover{
-    background-color:#6495ED ; 
+    background-color:#5e5e5e ; 
     opacity: .6;   
     transition: 1s;
     border-radius: 10px;
-    
+    color: black;
 }
-
+@media (max-width:600px){
+    .sidenav1{
+        height: auto;
+    }
+    .context{
+        height:auto
+    }
+}
 
 /* 中間內容調整 */
 .main-content{

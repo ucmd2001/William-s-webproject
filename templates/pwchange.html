@@ -52,13 +52,13 @@
                         <a href="/member_system">會員系統</a>
                     </div>
                     <div class="page">
-                        <a href="/web_crawler">PTT標題爬蟲</a>
+                        <a href="/web_crawler">PTT網頁標題爬蟲-一般版</a>
                     </div>
                     <div class="page">
-                        <a href="/ptt_crawler">PTT標題爬蟲-八卦版</a>
+                        <a href="/ptt_crawler">PTT網頁標題爬蟲-八卦版</a>
                     </div>
                     <div class="page">
-                        <a href="/ajax_crawler">Ajax標題爬蟲-for Medium</a>
+                        <a href="/ajax_crawler">Ajax網頁標題爬蟲-For Medium</a>
                     </div>
                     <div class="page">
                         <a href="/stock_crawler">漲停股爬蟲</a>
@@ -116,6 +116,25 @@
             } else {
                 pwbtn.setAttribute("disabled","disabled")
             }
+        });
+        // 回到頂部按鈕
+        $(function () {
+        var $win = $(window);
+        var $backToTop = $('.js-back-to-top');
+
+        // 當用戶滾動到離頂部100像素時，展示回到頂部按鈕
+
+        $win.scroll(function () {
+        if ($win.scrollTop() > 100) {
+        $backToTop.show();
+        } 
+        else {$backToTop.hide();}
+        });
+
+        // 當用戶點擊按鈕時，通過動畫效果返回頭部
+        $backToTop.click(function () {
+        $('html, body').animate({scrollTop: 0}, 200);
+        });
         });
     </script>
 </body>

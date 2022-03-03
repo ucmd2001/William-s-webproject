@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 響應式網站 -->
+    <!-- Bootstrap響應式網站 -->
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- jQuery library -->
@@ -15,6 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <!-- 連結Fontawsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- 連結Boostarp icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- 連結style.CSS -->
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
     <title>William's Project Web</title>
@@ -51,13 +53,13 @@
                     <a href="/member_system">會員系統</a>
                 </div>
                 <div class="page">
-                    <a href="/web_crawler">PTT標題爬蟲</a>
+                    <a href="/web_crawler">PTT網頁標題爬蟲-一般版</a>
                 </div>
                 <div class="page">
-                    <a href="/ptt_crawler">PTT標題爬蟲-八卦版</a>
+                    <a href="/ptt_crawler">PTT網頁標題爬蟲-八卦版</a>
                 </div>
                 <div class="page">
-                    <a href="/ajax_crawler">Ajax標題爬蟲-for Medium</a>
+                    <a href="/ajax_crawler">Ajax網頁標題爬蟲-For Medium</a>
                 </div>
                 <div class="page">
                     <a href="/stock_crawler">漲停股爬蟲</a>
@@ -65,51 +67,53 @@
             </div>
             <!-- 中間欄位 -->
             <div class="col-sm-8 main-content text-left">
-                <div class="title_index">
-                    <a href="/member_system">簡易會員系統</a>
-                </div>
-                <div class="inner">
-                    這是我做的一個簡單的會員頁面，在這邊可以簡單的登入、註冊，登入成功後也可以更改密碼及確認個人資訊，可以簡單的自己嘗試看看喔! 使用的是MongoDB資料庫，簡單的將資料存成一個個獨立的user Table，在存取檔案會相對的方便。.....
-                    <span class="SeeMore">
-                        <a href="/member_system">詳細閱讀</a>
-                    </span>
-                </div>
-                <div class="title_index">
-                    <a href="/web_crawler">PTT標題爬蟲</a>
-                </div>
-                <div class="inner">
-                    這是一個簡單的PTT-一般網頁爬蟲，如果有自己想要查詢的PTT網頁(不含18+的要求)也能丟上來查查看。 假如得到結果後也能自己去PTT看一下是不是正確的標題喔!這邊預設值是電影版的頁面。(另外為了防止有人濫用，限制一秒後才會.....
-                    <span>
-                        <a href="/web_crawler">詳細閱讀</a>
-                    </span>
-                </div>
-                <div class="title_index">
-                    <a href="/ptt_crawler">PTT標題爬蟲-八卦版</a>
-                </div>
-                <div class="inner">
-                    這是另一個簡單的PTT-一般網頁爬蟲，如果有自己想要查詢的PTT網頁(含18+的要求)也能丟上來查查看。 假如得到結果後也能自己去PTT看一下是不是正確的標題喔!這邊預設值是八卦版的頁面 (另外為了防止有人濫用，限制一秒後才會.....
-                    <spam>
-                        <a href="/ptt_crawler">詳細閱讀</a>
-                    </spam>
-                </div>
-                <div class="title_index">
-                    <a href="/ajax_crawler">Ajax標題爬蟲-for Medium</a>
-                </div>
-                <div class="inner">
-                    這次的爬蟲是使用ajax技術的網站，存取標題都包含在另外的Javascript程式內，而不是單純一整包包在Html裡面。這樣的好處是，每次送出新請求時可以不用整個Html都要重新跑過一次，在使用過程中如果需要做其他事情.....
-                    <spam>
-                        <a href="/ajax_crawler">詳細閱讀</a>
-                    </spam>
-                </div>
-                <div class="title_index">
-                    <a href="/stock_crawler">漲停股爬蟲</a>
-                </div>
-                <div class="inner">
-                    這次的爬蟲是比較實用的，我們來抓富邦的漲停股! 俗話說的好:你不理投資，投資就不理你。每天大家都會很常看股票，看看上上下下，心情也跟著上上下下，廁所沖來沖去。 那這隻爬蟲就能輕鬆幫你把現在漲停股抓下來。一鍵就能幫你看到.....
-                    <spam>
-                        <a href="/stock_crawler">詳細閱讀</a>
-                    </spam>
-                </div>
+               <header class="indextitle"><h2>當前作品簡介</h2></header>
+                <section>
+                    <h4>1.會員系統:</h4>
+                    <article>使用的Pymongo套件，這種方法是MongoDB資料庫(Nosql)儲存檔案。你可以在其中使用登入、註冊及更新密碼功能。按下登出後可以重新登入。</article>
+                    <br>
+                    <h4>2.爬蟲:</h4>
+                    <article>這邊使用的是Beatifulsoup來開發爬蟲系統。Beautiful Soup 是一個 Python 的函式庫模組，可以讓開發者僅須撰寫非常少量的程式碼，
+                             就可以快速解析網頁 HTML 碼，從中取出使用者有興趣的資料爬好的檔案直接回傳在網頁上。可以將想要爬的網站丟在輸入框內來直接使用爬蟲
+                             (有設定1S回傳，以免有人瘋狂F5導致爬的網站當機)
+                    </article>
+                </section>
+                <br>
+                <header class="indextitle"><h2>作品集</h2></header>
+                <nav class="bs-icons"> 
+                    <ul>
+                        <li>
+                            <a href="/member_system">
+                                <span class="icons"><i class="bi bi-person-circle"></i></span>
+                            </a>
+                            <sapn class="title">會員系統</sapn>
+                        </li>
+                        <li>
+                            <a href="/web_crawler">
+                                <span class="icons"><i class="bi bi-bug"></i></span>
+                            </a>
+                            <sapn class="title">PTT網頁標題爬蟲-一般版</sapn>
+                        </li>
+                        <li>
+                            <a href="/web_crawler">
+                                <span class="icons"><i class="bi bi-bug-fill"></i></span>
+                            </a>
+                            <sapn class="title">PTT網頁標題爬蟲-八卦版</sapn>
+                        </li>
+                        <li>
+                            <a href="/web_crawler">
+                                <span class="icons"><i class="bi bi-bug"></i></span>
+                            </a>
+                            <span class="title">Ajax網頁標題爬蟲-For Medium</span>
+                        </li>
+                        <li>
+                            <a href="/web_crawler">
+                                <span class="icons"><i class="bi bi-bug-fill"></i></span>
+                            </a>
+                            <sapn class="title">漲停股爬蟲</sapn>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <!-- 右邊欄位 先空白-->
             <div class="col-sm-2 sidenav2">
