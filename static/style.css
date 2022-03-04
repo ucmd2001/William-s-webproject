@@ -1,12 +1,14 @@
 /* 最上層顏色 */
 .container-intro{
-    background:rgb(212, 255, 212);
-    color:darkgreen;
+    background:darkblue;
+    color:rgb(255, 255, 255);
     font-size: 10px;
     padding: 15px;
     
 }
-
+h2,h3{
+    color: blue;
+}
 /* 回到最上層按鈕 */
 
 .back-to-top {
@@ -15,17 +17,17 @@
     bottom: 20px; /* 顯示在頁面底部 */
     right: 30px; /* 顯示在頁面的右邊 */
     z-index: 99; /* 確保不被其他功能覆蓋 */
-    border: 1px solid #5cb85c; /* 顯示邊框 */
+    border: 1px solid gray; /* 顯示邊框 */
     outline: none; /* 不顯示外框 */
     background-color: #fff; /* 設置背景背景顏色 */
-    color: #5cb85c; /* 設置文本顏色 */
+    color: blue; /* 設置文本顏色 */
     cursor: pointer; /* 滑鼠移到按鈕上顯示手型 */
     padding: 10px 15px 15px 15px; /* 增加一些內邊距 */
     border-radius: 15px; /* 增加圓角 */    
 }
     
 .back-to-top:hover {
-    background-color: #5cb85c; /* 滑鼠移上去時，反轉顏色 */
+    background-color:lightskyblue; /* 滑鼠移上去時，反轉顏色 */
     color: #fff;
 }
 /* 中間內容 */
@@ -33,10 +35,17 @@
 .content{
     height: 628px; 
 }
+/* 中間標題 */
 .indextitle{
     text-align: center;
+    color: blue;
+}
+/* 調整中間標題 */
+.main-content section h4{
+    color: blue;
 }
 /* 中間Bootstrap icon */
+
 /* 調整 ul list */
 .bs-icons ul{
     display: flex;
@@ -60,26 +69,26 @@
 }
 /* 調整ul lu 超連結a  */
 .bs-icons ul li a{
-    color: darkblue;
+    color: rgb(0, 81, 255);
     text-decoration: none;
     cursor: pointer;
 }
 /* 調整滑鼠移上去之後的顏色 */
 .bs-icons ul li .bi-person-circle:hover{
     color: white;
-    background-color: darkblue;
+    background-color: rgb(0, 81, 255);
     border-radius:99em;
     transition: 0.5s;
 }
 .bs-icons ul li .bi-bug:hover{
     color: white;
-    background-color: darkblue;
+    background-color: rgb(0, 81, 255);
     border-radius: 99em;
     transition: 0.5s;
 }
 .bs-icons ul li .bi-bug-fill:hover{
     color: white;
-    background-color: darkblue;
+    background-color: rgb(0, 81, 255);
     border-radius: 99em;
     transition: 0.5s;
 }
@@ -140,8 +149,19 @@ small{
 }
 
 /* 登入及註冊按鈕 */
-.main-content form .btn {
+.main-content form #signupbtn {
     font-size: 15px;
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    background-color:rgb(0, 140, 255) ;
+}
+.main-content form #signinbtn{
+    font-size: 15px;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    background-color:rgb(0, 140, 255) ;
 }
 
 /* 個人頁登出按鈕 */
@@ -164,7 +184,7 @@ small{
     padding: 30px;
     background-color: rgb(255, 255, 255);
     background-size:30%;
-    color: green;
+    color: blue;
 }
 /* 左邊作品列超連結邊框 */
 
