@@ -37,7 +37,12 @@
         </div>
     </div>
     <!-- Body -->
-
+    <!-- loading -->
+    <div class="perloader text-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
     <!-- 三欄位中間層 -->
     <div class="container-fluid">
         <div class="row content">
@@ -130,6 +135,11 @@
         $backToTop.click(function () {
         $('html, body').animate({scrollTop: 0}, 200);
         });
+        });
+        // loading畫面控制
+        $(window).load(function(){
+            $(".spinner-border").fadeOut('slow');
+            $(".perloader").fadeOut('slow');
         });
     </script>
     
