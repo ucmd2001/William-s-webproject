@@ -11,7 +11,7 @@ import time
 
 #連線mongoDB
 import pymongo
-client = pymongo.MongoClient("mongodb+srv://gigi:gigi@cluster0.4sn8p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@cluster0.4sn8p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = client.member_info
 
 #連線member_info 資料庫
